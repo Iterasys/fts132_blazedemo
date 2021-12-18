@@ -18,5 +18,5 @@ def step_impl(context):
 @then(u'vejo a mensagem de confirmacao')
 def step_impl(context):
     time.sleep(3)
-    assert context.driver.find_element(By.CSS_SELECTOR, 'div.code').text() == '419'
-    assert context.driver.find_element(By.CSS_SELECTOR, 'div.message').text() == 'Page Expired'
+    assert context.driver.find_element(By.CSS_SELECTOR, 'div.code').text == '419'
+    assert context.driver.find_element(By.CSS_SELECTOR, 'div.message').text == 'Page Expired'

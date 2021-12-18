@@ -86,8 +86,9 @@ def step_impl(context):
 
 @then(u'sou direcionado para a pagina de pagamento')
 def step_impl(context):
+    re = 'Please submit the form below to purchase the flight.'
     assert context.driver.find_element(By.XPATH,
-                                       "//p[contains(text(),'Please submit the form below to purchase the flight.')]").text == 'Please submit the form below to purchase the flight.'
+      "//p[contains(text(),'Please submit the form below to purchase the flight.')]").text == re
     print('Passo 7 - Direcionou para a página de pagamento')
 
 
